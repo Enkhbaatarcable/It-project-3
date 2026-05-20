@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cable</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f7f6f3;
+    --card: #ffffff;
+    --ink: #1c1c1a;
+    --muted: #888880;
+    --faint: #d4d3ce;
+    --accent: #3a5a3a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161614;
+      --card: #1e1e1c;
+      --ink: #eeece6;
+      --muted: #7a7a72;
+      --faint: #2e2e2c;
+      --accent: #6a9a6a;
+    }
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--faint);
+    margin: 2rem 0;
+  }
+
+  .roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .role {
+    font-size: 0.78rem;
+    font-weight: 400;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--faint);
+    border-radius: 999px;
+    color: var(--muted);
+    background: var(--card);
+  }
+
+  .about {
+    font-size: 0.93rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--ink);
+    margin-bottom: 2.5rem;
+  }
+
+  .skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--faint);
+  }
+
+  .skill-row:last-child { border-bottom: none; }
+
+  .skill-label {
+    font-size: 0.88rem;
+    color: var(--ink);
+  }
+
+  .skill-level {
+    display: flex;
+    gap: 4px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--faint);
+  }
+
+  .dot.on { background: var(--accent); }
+
+  .contact {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .contact a {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--faint);
+    padding-bottom: 1px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .contact a:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1 class="name">Cable</h1>
+  <p class="tagline">Based in Ulaanbaatar &nbsp;·&nbsp; Open to work</p>
+
+  <div class="roles">
+    <span class="role">Content Creator</span>
+    <span class="role">Video Editor</span>
+    <span class="role">Scriptwriter</span>
+    <span class="role">Producer</span>
+    <span class="role">Researcher</span>
+  </div>
+
+  <p class="about">
+    I make video content — writing scripts, editing footage, and generally figuring out how to make something worth watching. Comfortable across the whole production process, from first idea to final cut.
+  </p>
+
+  <hr>
+
+  <div class="skill-row">
+    <span class="skill-label">Video editing</span>
+    <div class="skill-level">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+    </div>
+  </div>
+  <div class="skill-row">
+    <span class="skill-label">Scriptwriting</span>
+    <div class="skill-level">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+    </div>
+  </div>
+  <div class="skill-row">
+    <span class="skill-label">Content research</span>
+    <div class="skill-level">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div>
+    </div>
+  </div>
+  <div class="skill-row">
+    <span class="skill-label">Production coordination</span>
+    <div class="skill-level">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+  <div class="skill-row">
+    <span class="skill-label">Social media</span>
+    <div class="skill-level">
+      <div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <a href="mailto:cable@email.com">Email</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">YouTube</a>
+  </div>
+
+</div>
+</body>
+</html>
